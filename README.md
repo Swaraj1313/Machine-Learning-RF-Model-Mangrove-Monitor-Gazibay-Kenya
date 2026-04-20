@@ -4,7 +4,18 @@
 ## Will take a few moments for the layers to upload (click Layers and check layers from the dropdown)
 
 ## Overview
-Developed a geospatial tracking architecture using Supervised Machine Learning (Random Forest). The model was trained on engineered spectral features (NDVI, NDWI) extracted from multispectral satellite imagery to autonomously classify coastal land-cover and quantify decadal ecological shifts to quantify decadal mangrove depletion and conservation recovery (2014–2025) in Gazi Bay, Kenya. 
+Developed a geospatial tracking architecture using Supervised Machine Learning (Random Forest). The model was trained on engineered spectral features (NDVI, NDWI) extracted from multispectral satellite imagery to autonomously classify coastal land-cover and quantify decadal ecological shifts to quantify decadal mangrove depletion and conservation recovery (2014–2025) in Gazi Bay, Kenya.
+
+Mangroves are hard to identify in satellite images because they look very similar to other green vegetation. From above, mangroves, forests, and even some wetland plants can all appear as dense green cover, so a normal satellite image cannot easily tell them apart.
+
+To solve this, a machine learning method called Random Forest was used. Instead of just looking at how green things appear in regular photos, the model was trained to recognize different types of land—mangroves, other vegetation, water, and bare land—by analyzing how they reflect different types of light.
+
+Satellite sensors capture not just visible light, but also infrared wavelengths that our eyes can't see. Different surfaces reflect these wavelengths differently: healthy vegetation strongly reflects near-infrared light, while water absorbs it. The model was trained using two key indicators calculated from these reflections:
+NDVI (Normalized Difference Vegetation Index) – measures how healthy and green the vegetation is by comparing red and near-infrared light reflection
+
+NDWI (Normalized Difference Water Index) – measures water content by comparing green and near-infrared light reflection
+Mangroves have a unique "spectral signature"—they reflect light in a specific pattern because they're both dense vegetation AND constantly surrounded by water. By learning to recognize this distinct reflection pattern across different wavelengths, the model can distinguish mangroves from ordinary land-based trees or wetland vegetation, even when they look similar in regular color images.
+
 
 ## AI & Machine Learning Architecture
 * **Algorithm:** Supervised Random Forest Classifier (100 decision trees) built natively in Google Earth Engine.
