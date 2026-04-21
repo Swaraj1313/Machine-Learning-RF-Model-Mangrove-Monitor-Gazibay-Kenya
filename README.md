@@ -10,10 +10,11 @@ Mangroves are hard to identify in satellite images because they look very simila
 
 To solve this, a machine learning method called Random Forest was used. Instead of just looking at how green things appear in regular photos, the model was trained to recognize different types of land—mangroves, other vegetation, water, and bare land—by analyzing how they reflect different types of light.
 
-Satellite sensors capture not just visible light, but also infrared wavelengths that our eyes can't see. Different surfaces reflect these wavelengths differently: healthy vegetation strongly reflects near-infrared light, while water absorbs it. The model was trained using two key indicators calculated from these reflections:
-NDVI (Normalized Difference Vegetation Index) – measures how healthy and green the vegetation is by comparing red and near-infrared light reflection
+Satellite sensors capture not just visible light, but also infrared wavelengths that our eyes can't see. Different surfaces reflect these wavelengths differently: healthy vegetation strongly reflects near-infrared light, while water absorbs it. 
 
-NDWI (Normalized Difference Water Index) – measures water content by comparing green and near-infrared light reflection
+The model was trained using two key indicators calculated from these reflections:
+
+NDVI (Normalized Difference Vegetation Index) – measures how healthy and green the vegetation is by comparing red and near-infrared light reflection & NDWI (Normalized Difference Water Index) – measures water content by comparing green and near-infrared light reflection
 Mangroves have a unique "spectral signature"—they reflect light in a specific pattern because they're both dense vegetation AND constantly surrounded by water. By learning to recognize this distinct reflection pattern across different wavelengths, the model can distinguish mangroves from ordinary land-based trees or wetland vegetation, even when they look similar in regular color images.
 
 
